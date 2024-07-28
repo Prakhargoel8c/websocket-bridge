@@ -51,7 +51,7 @@ class RivaASRClient {
              encoding = Encodings.LINEAR_PCM,
              maxAlts = 1,
              punctuate = true)   {
-        this.asrClient = new rasr.RivaSpeechRecognition(process.env.RIVA_API_URL, grpc.credentials.createInsecure());
+        this.asrClient = new rasr.RivaSpeechRecognition("speech.adalat.ai:50051", grpc.credentials.createInsecure());
         this.firstRequest = {
             streaming_config: {
                 config: {
